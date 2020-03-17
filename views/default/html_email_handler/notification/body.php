@@ -61,6 +61,7 @@ $elggSubdir = $isElggAtRoot ? '' : 'vendor/elgg/elgg/';
 				
 				<?php
 					if (!empty($recipient) && ($recipient instanceof ElggUser)) {
+						$language = $recipient->getLanguage($language);
 						$settings_url = "{$site_url}settings/user/{$recipient->username}";
 						if (elgg_is_active_plugin('notifications')) {
 							$settings_url = "{$site_url}notifications/personal/{$recipient->username}";
@@ -68,7 +69,7 @@ $elggSubdir = $isElggAtRoot ? '' : 'vendor/elgg/elgg/';
 						echo elgg_echo('html_email_handler:notification:footer:settings', [
 							"<a href='{$settings_url}'>",
 							'</a>',
-						]);
+						], $language);
 					}
 				?>
 				<div class="clearfloat"></div>
