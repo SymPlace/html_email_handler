@@ -61,7 +61,7 @@ $elggSubdir = $isElggAtRoot ? '' : 'vendor/elgg/elgg/';
 				
 				<?php
 					if (!empty($recipient) && ($recipient instanceof ElggUser)) {
-						$language = $recipient->getLanguage($language);
+						$language = $recipient->language;
 						$settings_url = "{$site_url}settings/user/{$recipient->username}";
 						if (elgg_is_active_plugin('notifications')) {
 							$settings_url = "{$site_url}notifications/personal/{$recipient->username}";
