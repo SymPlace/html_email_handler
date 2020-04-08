@@ -1,6 +1,10 @@
 Version history
 ===============
 
+4.0.5 (2020-04-08):
+
+- fixed: echo the footer in the recipient language
+
 4.0.4 (2017-09-08):
 
 - fixed: using wrong config value to get cookie settings
